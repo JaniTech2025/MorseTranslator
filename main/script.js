@@ -1,13 +1,4 @@
-import {
-  // isValidString,
-  // isValidMorse,
-  // mixedValues,
-  // translate_dict,
-  // characters,
-  isNotValidInput,
-  // convertChar,
-  convertStr,
-} from "../modules/module.js";
+import { isNotValidInput, convertStr } from "../modules/module.js";
 
 const inputTxtElem = document.getElementById("textarea1");
 const outputTxtElem = document.getElementById("textarea2");

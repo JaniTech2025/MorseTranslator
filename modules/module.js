@@ -96,8 +96,9 @@ export const characters = [
 export function isValidString(str) {
   const hasUppercase = /[A-Z]/.test(str);
   const hasLowercase = /[a-z]/.test(str);
-  const hasSlash = /\//.test(str);
-  return (hasLowercase || hasUppercase) && !hasSlash;
+  const hasDot = /\./.test(str);
+  const hasDash = /-/.test(str);
+  return (hasLowercase || hasUppercase) && !(hasDot || hasDash);
 }
 
 export function isValidMorse(str) {
@@ -125,20 +126,14 @@ let obj = translate_dict;
 export function convertChar(inKeyAlpha, inValueMorse, obj) {
   for (let key in obj) {
     if (obj.hasOwnProperty(key)) {
-      if (inKeyAlpha !== null && key === inKeyAlpha) {
-        // console.log("Morse value" + obj[inKeyAlpha]);
-        // return " " + obj[inKeyAlpha] + " ";
+      if (inKeyAlpha !== null && key === inKeyAlpha)
         return " " + obj[inKeyAlpha];
-      }
-      if (inValueMorse !== null && obj[key] === inValueMorse) {
-        // console.log("Char value" + key);
-        return key;
-      }
+
+      if (inValueMorse !== null && obj[key] === inValueMorse) return key;
     }
   }
+  return "#";
 }
-
-// let obj = translate_dict;
 
 export function convertStr(sentence) {
   let converted = "";
