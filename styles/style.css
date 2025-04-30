@@ -28,35 +28,57 @@ header {
 main {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
+main .button-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-label {
+main .button-container button {
+  margin-right: 50%;
+  font-size: 1.5em;
+  margin-left: 5%;
+  padding-left: 5%;
+  width: 50px;
+}
+main label {
   display: block;
-  font-size: 20px;
+  font-size: 0.1em;
   font-family: "Funnel Display", sans-serif;
   font-size: 30px;
   font-weight: 200;
   color: rgb(55, 50, 52);
 }
-
-textarea {
-  display: block;
-  resize: none;
+main textarea {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   background-color: whitesmoke;
-  width: 300px;
-  height: 150px;
+  width: 40vw;
+  height: 10rem;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 2em;
+  resize: none;
 }
 
-button {
-  font-size: 1.5em;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 25px;
+#displayMorse {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Funnel Display", sans-serif;
+  align-self: center;
+  font-size: 60px;
+  padding-top: 8%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 /*# sourceMappingURL=style.css.map */

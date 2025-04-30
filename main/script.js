@@ -1,7 +1,9 @@
 import { isNotValidInput, convertStr } from "../modules/module.js";
+import { translate_dict } from "../modules/module.js";
 
 const inputTxtElem = document.getElementById("textarea1");
 const outputTxtElem = document.getElementById("textarea2");
+const displayTextElem = document.querySelector("p");
 
 const buttonElem = document.getElementById("btn1");
 let inputTxt = inputTxtElem.textContent;
@@ -15,6 +17,13 @@ buttonElem.addEventListener("click", function () {
 
   outputTxtElem.value = convertStr(inputText) || "#";
 });
+
+const dispArr = [];
+for (const [key, value] of Object.entries(translate_dict)) {
+  dispArr.push(`${key}: ${value}`);
+}
+
+displayTextElem.textContent = dispArr;
 
 inputTxtElem.addEventListener("focus", function () {
   resetUI();

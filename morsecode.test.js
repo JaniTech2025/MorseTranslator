@@ -6,9 +6,9 @@ import {
   isValidString,
   convertChar,
   translate_dict,
-} from "./modules/module.js";
+} from "./modules/module";
 
-import isNotValidInput from "./modules/module.js";
+// import isNotValidInput from "./modules/module.js";
 
 let obj = translate_dict;
 
@@ -33,7 +33,9 @@ describe("Test cases for ConvertStr() that converts English text to Morse & vice
     );
   });
   test("Given mixed morse and English input, an error in input is indicated", () => {
-    expect(convertStr("this is a mixed sentence.-")).toBe("");
+    expect(convertStr("this is a mixed sentence.-")).toBe(
+      "Enter a valid input"
+    );
   });
   test("Given empty input, an error in input is indicated", () => {
     expect(convertStr("")).toBe("");
@@ -92,9 +94,9 @@ describe("Test cases for convertChar() that converts morse char to english char 
     expect(convertChar("I", null, obj)).toBe(" ..");
   });
   test("given incorrect english char it returns false", () => {
-    expect(convertChar("-", null, obj)).toBe("#");
+    expect(convertChar("-", null, obj)).toBe("Enter a valid input");
   });
   test("given incorrect morse char it returns false", () => {
-    expect(convertChar(null, " - ", obj)).toBe("#");
+    expect(convertChar(null, " - ", obj)).toBe("Enter a valid input");
   });
 });
