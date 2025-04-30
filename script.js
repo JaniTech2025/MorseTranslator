@@ -1,5 +1,4 @@
-import { isNotValidInput, convertStr } from "../modules/module.js";
-import { translate_dict } from "../modules/module.js";
+import { isNotValidInput, convertStr, translate_dict } from "./modules/module";
 
 const inputTxtElem = document.getElementById("textarea1");
 const outputTxtElem = document.getElementById("textarea2");
