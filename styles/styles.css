@@ -12,6 +12,7 @@
 
 body {
   background-color: whitesmoke;
+  font-size: clamp(1rem, 2vw, 1rem);
 }
 
 header {
@@ -72,13 +73,12 @@ main textarea {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   font-family: "Funnel Display", sans-serif;
   align-self: center;
-  font-size: 60px;
+  font-size: 2rem;
   padding-top: 8%;
   padding-left: 10%;
   padding-right: 10%;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */

@@ -1,4 +1,8 @@
-import { isNotValidInput, convertStr, translate_dict } from "./modules/module";
+import {
+  isNotValidInput,
+  convertStr,
+  translate_dict,
+} from "./modules/module.js";
 
 const inputTxtElem = document.getElementById("textarea1");
 const outputTxtElem = document.getElementById("textarea2");
@@ -19,7 +23,9 @@ buttonElem.addEventListener("click", function () {
 
 const dispArr = [];
 for (const [key, value] of Object.entries(translate_dict)) {
-  dispArr.push(`${key}: ${value}`);
+  let tempVal = key + value + " ";
+  // dispArr.push(`${key} : ${value}` + " ");
+  dispArr.push(tempVal);
 }
 
 displayTextElem.textContent = dispArr;
